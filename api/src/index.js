@@ -9,7 +9,7 @@ console.log(`
 
 LOGS
 ${process.env.PORT}
-${config}
+${JSON.stringify(config, null, 2)}
 
 
 
