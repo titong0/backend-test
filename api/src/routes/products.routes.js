@@ -2,13 +2,6 @@ const productsCtrl = require("../controllers/product.controller");
 
 const routes = [
   {
-    url: "/",
-    method: "GET",
-    handler: (req, res) => {
-      res.send("hola anda bien");
-    },
-  },
-  {
     url: "/products",
     method: "GET",
     handler: productsCtrl.getProducts,

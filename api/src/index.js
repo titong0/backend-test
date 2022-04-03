@@ -1,4 +1,4 @@
-const fastify = require("fastify")();
+const fastify = require("fastify")({ logger: true });
 const productsRoutes = require("./routes/products.routes");
 require("./utils/mongoose");
 
