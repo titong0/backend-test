@@ -1,4 +1,8 @@
+const { server } = require("../index");
 const productsCtrl = require("../controllers/product.controller");
+/**
+ * @type {import("fastify").RouteOptions<Server, IncomingMessage, ServerResponse, RouteGenericInterface, unknown, FastifySchema>[]}
+ */
 
 const routes = [
   {
@@ -14,6 +18,9 @@ const routes = [
   {
     url: "/products",
     method: "POST",
+    schema: {
+      body: server.getSchema("postProduct"),
+    },
     handler: productsCtrl.createProduct,
   },
   {
@@ -24,7 +31,11 @@ const routes = [
   {
     url: "/products/:id",
     method: "PUT",
+    schema: {
+      body: server.getSchema("putProduct"),
+    },
     handler: productsCtrl.editProduct,
   },
 ];
+
 module.exports = routes;

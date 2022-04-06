@@ -1,0 +1,19 @@
+.products-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(225, 156, 156);
+}
+
+.product-preview{
+  display: flex;
+}
+
+html{
+  background-color: antiquewhite;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

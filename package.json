@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "api": "nodemon api/src/index.js",
+    "api": "nodemon --watch api --watch libs api/src/index.js",
+    "dev-ui": "next dev",
+    "build": "next build",
     "start": "node api/src/index.js"
   },
   "keywords": [],
@@ -15,13 +16,20 @@
     "node": "14.x"
   },
   "dependencies": {
+    "ajv": "^8.11.0",
+    "ajv-formats": "^2.1.1",
+    "ajv-merge-patch": "^5.0.1",
     "boom": "^7.3.0",
     "dotenv": "^16.0.0",
     "fastify": "^3.27.4",
     "fastify-swagger": "^5.1.0",
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "next": "^12.1.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.1.2",
     "nodemon": "^2.0.15"
   }
 }

@@ -1,9 +1,16 @@
 const Product = require("../models/product.model");
 
+const deleteAll = async () => {
+  const all = await Product.find();
+  all.forEach((i) =>
+    Product.findByIdAndDelete(i._id).then((i) => console.log("deleted", i))
+  );
+};
+// deleteAll();
+
 const getProducts = (req, reply) => {
   const products = Product.find();
   return products;
-  // reply.send(products);
 };
 
 const getProductById = (req, reply) => {
